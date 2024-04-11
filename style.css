@@ -1,7 +1,8 @@
-body {
+*{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -26,10 +27,29 @@ nav ul li a {
     text-decoration: none;
 }
 
+main {
+    max-width: 88%;
+    margin: 10px auto;
+}
 section {
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
+section>h1 {
+    flex-basis: 20%;
+    text-align: right;
+    padding-right: 20px;
+    border-right: 3px solid black;
+    font-size: 36px;
+}
+
+section>div {
+    flex-basis: 80%;
+    padding-left: 10px;
+}
 .profile {
     text-align: center;
 }
@@ -48,15 +68,30 @@ section {
 }
 
 .applications a {
-    margin: 10px;
+    margin: 0.5em;
+    border: 3px solid black;
+    height: 180px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
 }
 
-.applications img {
-    width: 200px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
+.applications a div {
+    padding: 8px 10px;
+    background-color: #fff;
+    color: black;
 }
 
-.applications img:first-child {
-    transform: scale(1.2);
+.applications a:first-child {
+    min-height: 320px;
+    flex-basis: 100%;
+}
+
+.Horiseon {
+    background-image: url("https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=");
+background-repeat: no-repeat;
+background-size: cover;
 }
